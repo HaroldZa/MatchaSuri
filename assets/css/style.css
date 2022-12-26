@@ -206,7 +206,7 @@ input[type=number] {
     background: white;
     border-radius: 2rem;
     padding: .5rem 3rem;
-    width: 80%;
+    max-width: 110rem;
     margin: 0 auto;
 }
 .benefits__content{
