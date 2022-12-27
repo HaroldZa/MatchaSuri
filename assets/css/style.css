@@ -239,7 +239,8 @@ input[type=number] {
     max-width: 50%;
   }
 }
-.benefits__content__wimg_img > img{
+.benefits__content__wimg:hover{
+  transform: scale(1.01);
 }
 .benefits__content__wimg_text > p{
     padding: 0;
@@ -361,6 +362,7 @@ input[type=number] {
     font-size: 1.4rem;
     position: relative;
     z-index: 3;
+    transition: .7s;
 }
 .functions__content__block:nth-child(1),
 .functions__content__block:nth-child(3){
@@ -383,6 +385,11 @@ input[type=number] {
     border: 1px solid #adb747;
     color: white;
     font-weight: bold;
+    
+}
+.functions__content__block:hover{
+  transform: scale(1.01);
+  transition: .7s;
 }
 .functions__content__block::after{
     content: '';
