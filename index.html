@@ -29,16 +29,34 @@
             </div>
             <div class="hero__form">
                 <p class="hero__form_discount">
-                    Descuento de hasta un 50% <br>
-                    <span>790 MXN</span>
-                    <span><del>1580 MXN</del></span>
+                    Descuento de hasta un <h4>50%</h4> 
+                    <div class="animate__animated animate__pulse animate__infinite animate__slow">
+                        <span class="price_new">790 MXN</span>
+                        <span class="price_old"><del>1580 MXN</del></span>
+                    </div>
                 </p>
                 <form class="form">
-                    <input type="text" placeholder="Nombre">
-                    <input type="number" placeholder="Número de teléfono">
+                    <div class="content_label">
+                        <label class="label">
+                            <div class="input-wrapper">
+                                <span>Nombre</span>
+                                <input type="text" autocomplete="off" name="nombre" required>
+                                <i class="fa-solid fa-user input-icon"></i>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="content_label">
+                        <label class="label">
+                            <div class="input-wrapper">
+                                <span>Número de teléfono</span>
+                                <input type="number" autocomplete="off" name="celular" required>
+                                <i class="fa-solid fa-phone input-icon"></i>
+                            </div>
+                        </label>
+                    </div>                   
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem assumenda odio dolorem facilis sint modi. In consequatur quibusdam adipisci obcaecati quo. Accusamus, repudiandae. Vitae nihil consectetur enim rerum labore quasi!</p>
-                    <div class="form__btn">
-                        <button type="submit" class="custom-btn btn-5"><span>Realizar pedido</span></button>
+                    <div class="form__btn btn-5 ">
+                        <button type="submit" class="btn-5 animate__animated animate__pulse animate__infinite"><span>Realizar pedido</span></button>
                     </div>
                 </form>
             </div>
@@ -313,15 +331,33 @@
                 </div>
                 <div class="hero__form wow">
                     <p class="hero__form_discount">
-                        Descuento de hasta un 50% <br>
-                        <span>790 MXN</span>
-                        <span><del>1580 MXN</del></span>
+                        Descuento de hasta un <h4>50%</h4> 
+                        <div class="animate__animated animate__pulse animate__infinite animate__slow">
+                            <span class="price_new">790 MXN</span>
+                            <span class="price_old"><del>1580 MXN</del></span>
+                        </div>
                     </p>
                     <form class="form wow">
-                        <input type="text" placeholder="Nombre">
-                        <input type="number" placeholder="Número de teléfono">
+                        <div class="content_label">
+                            <label class="label">
+                                <div class="input-wrapper">
+                                    <span>Nombre</span>
+                                    <input type="text" autocomplete="off" name="nombre" required>
+                                    <i class="fa-solid fa-user input-icon"></i>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="content_label">
+                            <label class="label">
+                                <div class="input-wrapper">
+                                    <span>Número de teléfono</span>
+                                    <input type="number" autocomplete="off" name="celular" required>
+                                    <i class="fa-solid fa-phone input-icon"></i>
+                                </div>
+                            </label>
+                        </div>                       
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem assumenda odio dolorem facilis sint modi. In consequatur quibusdam adipisci obcaecati quo. Accusamus, repudiandae. Vitae nihil consectetur enim rerum labore quasi!</p>
-                        <div class="form__btn">
+                        <div class="form__btn  animate__animated animate__pulse animate__infinite">
                             <button type="submit" class="custom-btn btn-5"><span>Realizar pedido</span></button>
                         </div>
                     </form>
@@ -331,6 +367,7 @@
     </section>
 
     <footer class="footer">
+
         <p>© 2022 Copyright. Todos los derechos reservados.</p>
     </footer>
 
@@ -343,6 +380,26 @@
     <script src="assets/js/wow.js"></script>
         <script>
             new WOW().init();
+        </script>
+
+        <script>
+            const inputs = document.querySelectorAll('.label input');
+            const label = document.querySelectorAll('.label');
+
+            inputs.forEach( input => {
+                input.onfocus = () => {
+                    input.previousElementSibling.classList.add('top');
+                    input.previousElementSibling.classList.add('focus');
+                }
+                
+                input.onblur = () => {
+                    input.value = input.value.trim();
+                    if( input.value.trim().length == 0 ){
+                        input.previousElementSibling.classList.remove('top');
+                    }
+                    input.previousElementSibling.classList.remove('focus');
+                }
+            } );
         </script>
 
 </body>
