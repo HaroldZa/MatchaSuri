@@ -395,7 +395,7 @@ input[type=number] {
 
 /* Reviews */
 .reviews {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/reviews__bg.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/reviews_bg.webp");
     background-repeat: no-repeat;
     background-size: cover;
   }
