@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
 html {
     box-sizing: border-box;
@@ -14,6 +15,7 @@ body {
     font-size: 1.6rem;
     line-height: 2;
     background-color: #d0e4c4;
+    overflow-x: hidden;
 }
 /* Global */
 .container {
@@ -73,6 +75,9 @@ img {
     width: 70%;
     color: rgb(210, 210, 210);
     font-weight: 500;
+
+    animation: fadeInLeft; 
+    animation-duration: 1s;
 }
 .hero__text > h1{
     font-size: 11rem;
@@ -106,8 +111,14 @@ img {
 	width: 98%;
     position: relative;
     text-align: center;
-}
 
+    animation: fadeInRight; 
+    animation-duration: 1s;
+}
+.form{
+  animation: fadeInRight; 
+    animation-duration: 1s;
+}
 .hero__form:after{
 	background: rgba(255,255,255,0.6);
 	content: '';
@@ -201,6 +212,9 @@ input[type=number] {
     padding: .5rem 3rem;
     max-width: 110rem;
     margin: 0 auto;
+
+    animation: fadeInUp; 
+    animation-duration: 1s;
 }
 .benefits__content{
     display: grid;
@@ -220,7 +234,10 @@ input[type=number] {
     display: flex;
     align-items: center;
 }
-.benefits__content__wimg_img{
+@media (min-width: 944px){
+  .benefits__content__wimg:nth-child(4){
+    max-width: 50%;
+  }
 }
 .benefits__content__wimg_img > img{
 }
@@ -241,12 +258,23 @@ input[type=number] {
 }
 .info > h2{
     text-align: center;
+
+    animation: fadeInLeft; 
+    animation-duration: 1s;
 }
 .info__content{
     display: flex;
     column-gap: 5rem;
     margin-top: 4rem;
     font-weight: 500;
+}
+.info__content__text{
+  animation: fadeInLeft; 
+  animation-duration: 2s;
+}
+.info__content > img{
+  animation: fadeInRight; 
+  animation-duration: 2s;
 }
 .info__steps{
     display: grid;
@@ -311,6 +339,9 @@ input[type=number] {
 .functions__content > h2{
     text-align: center;
     color: white;
+
+    animation: fadeInUp; 
+  animation-duration: 1s;
 }
 .functions__content__blocks{
     padding-top: 7rem;
@@ -330,6 +361,16 @@ input[type=number] {
     font-size: 1.4rem;
     position: relative;
     z-index: 3;
+}
+.functions__content__block:nth-child(1),
+.functions__content__block:nth-child(3){
+  animation: fadeInLeft; 
+  animation-duration: 1s;
+}
+.functions__content__block:nth-child(2),
+.functions__content__block:nth-child(4){
+  animation: fadeInRight; 
+  animation-duration: 1s;
 }
 .functions__content__block > span:nth-child(1){
     position: absolute;
@@ -368,12 +409,16 @@ input[type=number] {
 }
 .composition__content > h2{
     text-align: center;
+
+    animation: bounceIn; 
+    animation-duration: 1s;
 }
 .composition__blocks{
     display: flex;
     justify-content: center;
     text-align: center;
     margin-top: 7rem;
+    row-gap: 3rem;
 }
 .composition__block_img{
     width: 100%;
@@ -383,6 +428,9 @@ input[type=number] {
     width: 20rem;
     height: 20rem;
     border-radius: 50%;
+
+    animation: pulse; 
+    animation-duration: 1s;
 }
 .composition__block_img > span{
     display: block;
@@ -405,6 +453,9 @@ input[type=number] {
     margin: 0 auto;
     font-weight: bold;
     color: white;
+
+    animation: pulse; 
+    animation-duration: 1s;
   }
   .reviews__content {
     padding: 5rem 0;
@@ -695,6 +746,8 @@ input[type=number] {
     padding-top: 7rem;
     text-align: center;
     
+    animation: fadeInLeft; 
+    animation-duration: 1s;
 }
 .steps__content_blocks{
     margin-top: 5rem;
@@ -705,6 +758,9 @@ input[type=number] {
     padding: 3rem 4rem;
     margin-left: auto;
     margin-right: auto;
+
+    animation: fadeInLeft; 
+    animation-duration: 2s;
 }
 .steps__content_blocks > li{
     display: flex;
@@ -729,6 +785,9 @@ input[type=number] {
 .steps__content_images{
     position: relative;
     padding-top: 5rem;
+
+    animation: fadeInRight; 
+    animation-duration: 2s;
 }
 .steps__content_images > img:nth-child(2){
     position: absolute;
@@ -749,6 +808,9 @@ input[type=number] {
     margin: 5rem auto 5rem auto;
     text-align: center;
     color: #1E1E1E;
+
+    animation: pulse; 
+    animation-duration: 1s;
     
 }
 .timeline__images > img:nth-child(1){
@@ -779,6 +841,9 @@ input[type=number] {
 .timeline div {
     width: 300px;
     margin: auto;
+
+    animation: fadeInUp; 
+    animation-duration: 1s;
   }
   
   .timeline p {
@@ -832,6 +897,10 @@ input[type=number] {
     width: min(95%, 70rem);
     margin: 0 auto;
     padding: 7rem 0 5rem 0;
+
+    animation: bounceIn; 
+    animation-duration: 2s;
+
 }
 .text_f ul li{
     color: black;
