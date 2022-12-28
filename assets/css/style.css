@@ -958,6 +958,9 @@ input[type=number] {
 .footer > p{
     padding: 0;
     margin: 0;
+
+    animation: fadeInRight; 
+    animation-duration: 1s;
 }
 
 @media (max-width: 1150px) {

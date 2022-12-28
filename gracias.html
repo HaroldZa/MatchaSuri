@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Su pedido ha sido enviado</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/ty.css">
+</head>
+<body>
+    <section class="main">
+        <div class="main__content container">
+            <h1>¡Felicitaciones! Su Pedido Ha Sido Enviado</h1>
+            <p>En breve nos comunicaremos para confirmar los detalles de tu compra.</p>
+            <div class="main__caution">
+                <p><span>COVID-19 IMPORTANTE</span> Debido a la pandemia estamos experimentando demoras en la entrega en algunas zonas.</p>
+            </div>
+
+            <div class="main__details">
+                <div class="main__details_block">
+                    <span>Detalles del pedido</span>
+                    <ul class="main__details__order">
+                        <li><p><strong>Producto:</strong> Matcha Suri</p></li>
+                        <li><p><strong>Precio:</strong> $10</p></li>
+                        <li><p><strong>Número de Orden:</strong> 984647878</p></li>
+                    </ul>
+                </div>
+                <div class="main__details_block">
+                    <span>Detalles de contacto</span>
+                    <p>Por favor, revisa tu información de contacto:</p>
+                    <ul class="main__details__order">
+                        <li><p><strong>Nombre:</strong> Juan Perez</p></li>
+                        <li><p><strong>Teléfono:</strong> 76483903</p></li>
+                    </ul>
+                    <a href="/">Si cometiste un error, regresa y completa el formulario nuevamente.</a>
+                </div>
+                <!-- <form>
+                    <p>Para agilizar el pedido, indica tu dirección de envío:</p>
+                    <div class="content_label">
+                        <label class="label">
+                            <div class="input-wrapper">
+                                <span>Dirección de envío</span>
+                                <input type="text" autocomplete="off" name="direccion" required>
+                                <i class="fa-solid fa-paper-plane input-icon"></i>
+                            </div>
+                        </label>
+                    </div>
+                </form> -->
+                <div class="main__newsletter">
+                    <h3 >¡Consigue más descuentos!</h3>
+                    <p >Ingrese su correo electrónico para obtener más descuentos exclusivos</p>
+                    <form >
+                        <div class="content_label">
+                            <label class="label">
+                                <div class="input-wrapper">
+                                    <span>Dirección de correo</span>
+                                    <input type="email" autocomplete="off" name="correo" required>
+                                    <i class="fa-solid fa-envelope input-icon"></i>
+                                </div>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-5"><span>Enviar</span></button>
+                    </form>
+                </div>
+                <div class="main__details__images">
+                    <img src="assets/img/matcha_product1.webp" alt="">
+                    <img src="assets/img/matcha_product1.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social">
+        <p >¡Comparte esta oferta con un amig@!</p>
+        <a  target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+        <a  target="_blank" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+    </section>
+
+    <footer class="footer">
+        <p >© 2022 Copyright. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/de940a770d.js" crossorigin="anonymous"></script>
+
+    <script>
+        const inputs = document.querySelectorAll('.label input');
+        const label = document.querySelectorAll('.label');
+
+        inputs.forEach( input => {
+            input.onfocus = () => {
+                input.previousElementSibling.classList.add('top');
+                input.previousElementSibling.classList.add('focus');
+            }
+            
+            input.onblur = () => {
+                input.value = input.value.trim();
+                if( input.value.trim().length == 0 ){
+                    input.previousElementSibling.classList.remove('top');
+                }
+                input.previousElementSibling.classList.remove('focus');
+            }
+        } );
+    </script>
+</body>
+</html>
