@@ -962,6 +962,9 @@ input[type=number] {
     animation: fadeInRight; 
     animation-duration: 1s;
 }
+.terms > a{
+  color: #adb747;
+}
 
 @media (max-width: 1150px) {
   .info__content__text > p{
